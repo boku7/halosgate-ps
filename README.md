@@ -26,3 +26,7 @@ Cobalt Strike Beacon Object File (BOF) that uses a custom HalosGate & HellsGate 
 ##### BOF Code References
 ###### anthemtotheego/InlineExecute-Assembly
 + https://github.com/anthemtotheego/InlineExecute-Assembly/blob/main/inlineExecuteAssembly/inlineExecute-Assembly.cna
+###### ajpc500/BOFs
++ https://github.com/ajpc500/BOFs/
+###### trustedsec/CS-Situational-Awareness-BOF
++ https://github.com/trustedsec/CS-Situational-Awareness-BOF
