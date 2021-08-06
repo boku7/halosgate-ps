@@ -1,0 +1,26 @@
+beacon_command_register(
+    "halosgate-ps", 
+    "Performs the processlist (ps) command via syscalls using halos+hells gate",
+    "Synopsis: halosgate-ps <-v>"
+);
+
+alias halosgate-ps {
+    local('$handle $data $args');
+
+    if(($2 eq "-v"))
+	{
+        $verbose = 1;
+    }else{
+        $verbose = 0;
+    }
+
+    $handle = openf(script_resource("halosgate-ps.x64.o"));
+    $data = readb($handle, -1);
+    closef($handle);
+
+    $args   = bof_pack($1,"i",$verbose);
+
+    btask($1, "HalosGate Processlist BOF (Author: Bobby Cooke//SpiderLabs|@0xBoku|github.com/boku7)");
+    btask($1, "              Credits to: @SEKTOR7net @zodiacon @smelly__vx @am0nsec"); 
+    beacon_inline_execute($1, $data, "go", $args);
+}
