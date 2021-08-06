@@ -1,0 +1,1 @@
+x86_64-w64-mingw32-gcc -c halosgate-ps.x64.c -o halosgate-ps.x64.o -masm=intel
