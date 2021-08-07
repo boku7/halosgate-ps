@@ -188,7 +188,7 @@ __asm__("HellDescent: \n\
   syscall \n\
   ret \n\
 ");
-extern HellDescent();
+extern int HellDescent();
 
 void go(char * args, int len) {
 	datap parser;
