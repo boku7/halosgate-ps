@@ -8,6 +8,16 @@ Cobalt Strike Beacon Object File (BOF) that uses a custom HalosGate & HellsGate 
 #### Verbose mode (-v) shows the memory addresses back to the CS console for debugging
 ![](/images/hgps-verbose.png)
 
+### Compile with x64 MinGW (Only tested from MacOS compiling atm):
+```bash
+x86_64-w64-mingw32-gcc -c halosgate-ps.x64.c -o halosgate-ps.x64.o -masm=intel
+```
+### Run from Cobalt Strike Beacon Console
++ After compile import the halosgate-ps.cna script into Cobalt Strikes Script Manager
+```bash
+beacon> halosgate-ps
+```
+
 ### Usage
 ```bash
 beacon> halosgate-ps
