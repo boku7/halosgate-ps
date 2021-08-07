@@ -20,6 +20,7 @@ beacon> halosgate-ps
 
 ### To Do List
 + Free the memory allocated / fix memory leaks
++ Figure out a way to supress the "[+] received output:" messages in the Cobalt Strike console
 + Obfuscate the strings for that are used for resolving the addresses of the NTDLL symbols
   + Or use hashing
 + Build on this to make a series of BOFs that use this HalosGate/HellsGate syscaller to do direct systemcalls
