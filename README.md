@@ -1,6 +1,35 @@
 # HalosGate Processlist Cobalt Strike BOF
 Cobalt Strike Beacon Object File (BOF) that uses a custom HalosGate & HellsGate syscaller, written in assembly, to return a list of processes.
 
+#### Getting that Processlist using direct systemcalls via HalosGate/HellsGate
+![](/images/hgps1.png)
++ If there is no EDR hooks detected, the BOF will just default to using HellsGate
+
+#### Verbose mode (-v) shows the memory addresses back to the CS console for debugging
+![](/images/hgps-verbose.png)
+
+### Usage
+```bash
+beacon> halosgate-ps
+[*] HalosGate Processlist BOF (Author: Bobby Cooke//SpiderLabs|@0xBoku|github.com/boku7)
+[*]               Credits to: @SEKTOR7net @zodiacon @smelly__vx @am0nsec
+[+] host called home, sent: 3232 bytes
+   PID    PPID    Name
+   ---    ----    ----
+     0       0    (null)
+     4       0    System
+    92       4    Registry
+   312       4    smss.exe
+   436     424    csrss.exe
+   512     424    wininit.exe
+   532     504    csrss.exe
+   624     504    winlogon.exe
+   648     512    services.exe
+   692     512    lsass.exe
+   ...
+```
+
+
 ### Credits / References
 ##### Reenz0h from @SEKTOR7net (Creator of the HalosGate technique )
   + This HalosGate project is based on the work of Reenz0h.
